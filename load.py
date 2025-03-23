@@ -30,6 +30,7 @@ def parse_xmltodict(file):
 
 def process_one(col, file):
     data = parse_xmltodict(file)
+    del data['record:record']['activities:activities-summary'] # produces "BSON document too large" in MongoDB
     col.insert_one(data)
 
 

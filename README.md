@@ -3,9 +3,10 @@
 # ORCID Load
 Scripts to load ORCID in MongoDB
 
-# install dependencies with 
+# install dependencies 
+```
 pip install xmltodict joblib pymongo
-
+```
 
 edit load.py to set the path to the ORCID data files and the MongoDB connection string
 

@@ -36,3 +36,4 @@ def process_one(col, file):
 Parallel(n_jobs=jobs, verbose=10, backend="threading")(
     delayed(process_one)(col, file) for file in summaries
 )
+col.create_index("record:record.common:orcid-identifier.common:uri")

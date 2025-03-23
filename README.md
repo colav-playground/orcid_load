@@ -1,5 +1,7 @@
-# orcid_load
-scripts to load ORCID in MongoDB
+<img src="https://raw.githubusercontent.com/colav/colav.github.io/master/img/Logo.png"/>
+
+# ORCID Load
+Scripts to load ORCID in MongoDB
 
 # install dependencies with 
 pip install xmltodict joblib pymongo

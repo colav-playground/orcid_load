@@ -44,3 +44,25 @@ tar -xvf ORCID_2024_10_summaries.tar.gz
 ```
 
 This is the information required to load the data in MongoDB from authors.
+
+#  ORCID cut
+Extracts and syncs unique ORCID records from multiple MongoDB sources into orcidco.summaries, avoiding duplicates.
+
+What It Does
+* Extracts ORCID identifiers from the following data sources:
+* OpenAlex (openalexco.authors)
+* SCIENTI databases (scienti_udea_2024, scienti_uec_2024, scienti_unaula_2024, scienti_univalle_2024)
+* Minciencias / CVLAC (yuku.cvlac_stage)
+* Normalizes all ORCID identifiers to the standard https://orcid.org/{id} format using get_id_from_url.
+* Checks if each ORCID already exists in orcidco.summaries.
+* Inserts only new ORCID records from orcid.summaries into orcidco.summaries.
+
+Requirements
+* Python ≥ 3.10
+* MongoDB running locally or accessible at the URI provided.
+* Python dependencies:
+    * pymongo
+    * kahi_impactu_utils (must provide get_id_from_url())
+ 
+How to Run
+python orcid_cut.py

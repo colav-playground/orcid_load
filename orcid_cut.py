@@ -56,7 +56,7 @@ def get_orcids_from_openalex() -> set:
 
 def sync_orcid_records(orcids: set):
     """Copies ORCID records from the 'orcid' database into 'orcidco' if not already present."""
-    dest_col = dbclient["orcidco_test"]["summaries"]
+    dest_col = dbclient["orcidco"]["summaries"]
     src_col = orcid_db["summaries"]
 
     for orcid_id in orcids:

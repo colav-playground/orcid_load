@@ -64,5 +64,12 @@ Requirements
     * pymongo
     * kahi_impactu_utils (must provide get_id_from_url())
  
-How to Run
+install dependencies
+```
+pip install pymongo kahi_impactu_utils
+```
+ 
+Run with
+``` 
 python orcid_cut.py
+``` 
